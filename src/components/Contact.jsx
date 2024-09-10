@@ -1,0 +1,116 @@
+import SectionWrapper from '../Data/SectionWrapper';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
+const Contact = () => {
+  const formRef = useRef();
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .send(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          to_name: 'Plamen',
+          from_email: form.email,
+          to_email: 'torbalansky@gmail.com',
+          message: form.message,
+        },
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert('Thank you. I will get back to you as soon as possible.');
+
+          setForm({
+            name: '',
+            email: '',
+            message: '',
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.error(error);
+          alert('Something went wrong. Please, try again.');
+        }
+      );
+  };
+
+  return (
+    <SectionWrapper>
+      <h2 className='text-center text-2xl font-bold mt-16 mb-6' data-aos='zoom-in'>Get in Touch</h2>
+      <div className="flex flex-col md:flex-row justify-center items-start gap-6 p-2" data-aos="zoom-in-left">
+        <div className="flex flex-col max-w-md w-full text-center md:text-left">
+          <div className='mb-4 mt-4 font-mono'>
+            <p className="text-xl mb-2"><strong>Email:</strong> torbalansky.com</p>
+            <p className="text-xl mb-2"><strong>Phone:</strong> +359894 061 189</p>
+            <p className="text-xl mb-2"><strong>Address:</strong> Sofia, Bulgaria</p>
+          </div>
+        </div>
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="p-4 shadow-md w-full max-w-md border"
+>
+          <div className="space-y-4">
+            <input
+              type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              placeholder="Name"
+              className="w-full p-3 border bg-slate-400 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+            <input
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="E-mail"
+              className="w-full p-3 border bg-slate-400 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+            <textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="Message"
+              className="w-full p-3 border bg-slate-400 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              rows="4"
+            />
+           <button
+            type="submit"
+            className="w-full py-2 font-bold text-white bg-gradient-to-r from-indigo-600 to-indigo-600 bg-[length:200%_100%] bg-left hover:bg-right hover:from-green-400 hover:to-blue-500 transition-all duration-500 ease-out"
+            >
+            {loading ? 'Sending...' : 'Send'}
+            </button>
+          </div>
+        </form>
+      </div>
+      <div className="text-center mt-8 p-11 bottom-0 left-0 opacity-90 text-xs">
+          © 2024 <a href="https://github.com/torbalansky" className="text-green-400 hover:text-red-200">Paco/torbalansky</a>
+        </div>
+    </SectionWrapper>
+  );
+};
+
+export default Contact;

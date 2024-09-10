@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rotate-360 {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .rotate-360:hover {
+    transform: rotate(360deg);
+  }
+
+.theme-move {
+  transition: transform 1s ease-in-out;
+}
+
+.theme-move.move-up {
+  animation: moveUp 1s ease-in-out;
+}
+
+.theme-move.move-down {
+  animation: moveDown 1s ease-in-out;
+}
+
+@keyframes moveUp {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes moveDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(30px); }
+  100% { transform: translateY(0); }
+}
