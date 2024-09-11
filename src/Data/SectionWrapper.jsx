@@ -3,7 +3,7 @@ import { useTheme } from '../Data/Theme';
 
 const SectionWrapper = ({ children }) => {
     const { theme, toggletheme } = useTheme();
-    const backgroundClass = theme === 'light' ? 'bg-gray-50' : 'bg-gray-800';
+    const backgroundClass = theme === 'light' ? 'bg-gray-50' : 'bg-gray-700';
     const textcolor = theme === 'light' ? 'text-black' : 'text-white';
     const iconcolor = theme === 'light' ? 'text-black' : 'text-white';
     const buttoncolor = theme === 'light' ? 'bg-blue-500 text-white' : 'bg-green-500 text-white';

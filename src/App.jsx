@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Link, Element } from 'react-scroll';
+import { Element, scroller } from 'react-scroll';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Work from './components/Work';
@@ -18,6 +18,13 @@ const App = () => {
       once: true,
       mirror: false,
     });
+
+    scroller.scrollTo('hero', {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+    });
+
     return () => {
       Aos.refresh();
     };

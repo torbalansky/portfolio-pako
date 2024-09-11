@@ -33,3 +33,23 @@
   50% { transform: translateY(30px); }
   100% { transform: translateY(0); }
 }
+
+@media (max-width: 900px) and (min-width: 300px) { 
+  .hero-section h2 {
+  font-size: large;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 800px) { 
+  .hero-section h2 {
+  font-size: 28px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  }
+
+  .hero-section p {
+    font-size: 24px;
+  }
+}

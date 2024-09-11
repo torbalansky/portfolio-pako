@@ -11,6 +11,7 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,6 +24,19 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!form.name || !form.email || !form.message) {
+      setError('All fields are required.');
+      setLoading(false);
+      return;
+    } else if (!emailRegex.test(form.email)) {
+      setError('Please enter a valid email address.');
+      setLoading(false);
+      return;
+    }
+
+    setError('');
 
     emailjs
       .send(
@@ -63,15 +77,14 @@ const Contact = () => {
         <div className="flex flex-col max-w-md w-full text-center md:text-left">
           <div className='mb-4 mt-4 font-mono'>
             <p className="text-xl mb-2"><strong>Email:</strong> torbalansky.com</p>
-            <p className="text-xl mb-2"><strong>Phone:</strong> +359894 061 189</p>
+            <p className="text-xl mb-2"><strong>Phone:</strong> +359 894 061 189</p>
             <p className="text-xl mb-2"><strong>Address:</strong> Sofia, Bulgaria</p>
           </div>
         </div>
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="p-4 shadow-md w-full max-w-md border"
->
+          className="p-4 shadow-md w-full max-w-md border">
           <div className="space-y-4">
             <input
               type="text"
@@ -79,6 +92,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="Name"
+              required
               className="w-full p-3 border bg-slate-400 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
             <input
@@ -87,6 +101,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="E-mail"
+              required
               className="w-full p-3 border bg-slate-400 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
             <textarea
@@ -94,9 +109,11 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="Message"
+              required
               className="w-full p-3 border bg-slate-400 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
               rows="4"
             />
+            {error && <p className="text-red-500 font-mono">{error}</p>}
            <button
             type="submit"
             className="w-full py-2 font-bold text-white bg-gradient-to-r from-indigo-600 to-indigo-600 bg-[length:200%_100%] bg-left hover:bg-right hover:from-green-400 hover:to-blue-500 transition-all duration-500 ease-out"

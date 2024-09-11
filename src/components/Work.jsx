@@ -20,7 +20,7 @@ const Work = () => {
 
   return (
     <SectionWrapper>
-      <h1 className='text-center text-2xl font-bold mt-14 mb-6'>Projects</h1>
+      <h1 className='text-center text-2xl font-bold mt-20 mb-6'>Projects</h1>
       <div className='flex flex-wrap justify-center gap-12' data-aos='zoom-in'>
         {projectsData.map((project) => (
           <div 
