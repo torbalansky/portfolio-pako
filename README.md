@@ -1,8 +1,15 @@
-# React + Vite
+### Overview
+- This is my personal portfolio website showcasing my journey, skills, and projects as a Frontend Developer.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Website:** [Portfolio Paco](https://portfoliopaco.vercel.app/)
 
-Currently, two official plugins are available:
+### Features
+- Clean and simple design, responsive across devices.
+- Contact form with EmailJS integration.
+- Downloadable resume in PDF format.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Technologies Used
+- React
+- Vite
+- Tailwind CSS
+- EmailJS
