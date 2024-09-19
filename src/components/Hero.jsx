@@ -14,7 +14,7 @@ const Hero = () => {
           <img src={heroImg} alt="Profile picture of Pako" className="w-40 h-40 md:w-60 md:h-60 rounded-full border-2 border-gray-300" />
         </div>
         <div className="flex flex-col items-center md:items-start justify-center">
-          <h1 className="text-2xl md:text-3xl font-bold mt-2 md:mt-4">Plamen/Paco</h1>
+          <h1 className="text-2xl md:text-3xl font-bold mt-2 md:mt-4">Stateva/Paco</h1>
           <h2 className="font-mono text-md md:text-md font-semibold mt-1 md:mt-2">FRONTEND DEVELOPER</h2>
           <div className="flex justify-center md:justify-start gap-4 mt-2 items-center">
             <a href="https://www.linkedin.com/in/plamenstatev/" target="_blank" rel="noopener noreferrer">
