@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImg from '../assets/me.png';
+import heroImg from '../assets/me.jpg';
 import { PiLinkedinLogo } from "react-icons/pi";
 import { LiaGithubSquare, LiaResearchgate } from "react-icons/lia";
 import CV from '../assets/CV.pdf';
@@ -11,7 +11,7 @@ const Hero = () => {
     <SectionWrapper>
       <div className="hero-section min-h-svh flex flex-col md:flex-row items-center justify-center text-center md:text-left" data-aos="fade-down">
         <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-24">
-          <img src={heroImg} alt="Profile picture of Pako" className="w-40 h-40 md:w-60 md:h-60 rounded-full border-2 border-gray-300" />
+          <img src={heroImg} alt="Profile picture of Pako" className="w-60 h-800 md:w-60 md:h-80 rounded border-2 border-gray-300" />
         </div>
         <div className="flex flex-col items-center md:items-start justify-center">
           <h1 className="text-2xl md:text-3xl font-bold mt-2 md:mt-4">Stateva/Paco</h1>
