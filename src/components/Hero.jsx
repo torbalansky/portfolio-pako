@@ -17,7 +17,7 @@ const Hero = () => {
           <h1 className="text-2xl md:text-3xl font-bold mt-2 md:mt-4">Stateva/Paco</h1>
           <h2 className="font-mono text-md md:text-md font-semibold mt-1 md:mt-2">FRONTEND DEVELOPER</h2>
           <div className="flex justify-center md:justify-start gap-4 mt-2 items-center">
-            <a href="https://www.linkedin.com/in/plamenstatev/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/pacostathis/" target="_blank" rel="noopener noreferrer">
               <PiLinkedinLogo className="w-7 h-7 md:w-8 md:h-8 cursor-pointer transition-all duration-200 ease-in-out hover:scale-110" />
             </a>
             <a href="https://github.com/torbalansky" target="_blank" rel="noopener noreferrer">
