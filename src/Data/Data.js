@@ -6,6 +6,8 @@ import { RiJavascriptLine } from "react-icons/ri";
 import { FaHtml5, FaCss3Alt, FaNodeJs, FaPython, FaGitSquare  } from "react-icons/fa";
 import { RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoMongodb, BiLogoPostgresql, BiLogoDjango } from "react-icons/bi";
+import { SiPostgresql, SiMysql, SiPostman } from "react-icons/si";
+import { PiFileSqlLight } from "react-icons/pi";
 
 export const NavbarData = [
   {
@@ -153,9 +155,16 @@ export const techData = [
     backgroundColor: "#092E20", // Django color
   },
 
-  // Tools
   {
     id: 11,
+    title: "Postman",
+    logo: SiPostman,
+    backgroundColor: "#E44D26", // Django color
+  },
+
+  // Tools
+  {
+    id: 12,
     title: "Git",
     logo: FaGitSquare,
     backgroundColor: "#F05032", // Git color
