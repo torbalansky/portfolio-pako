@@ -1,13 +1,12 @@
 import vamos from '../assets/vamos.png';
 import PEDB from '../assets/pedb.png';
-import meet from '../assets/meet.png';
+import calculators from '../assets/calculators.jpg';
 import chat from '../assets/chat.png';
 import { RiJavascriptLine } from "react-icons/ri";
 import { FaHtml5, FaCss3Alt, FaNodeJs, FaPython, FaGitSquare  } from "react-icons/fa";
 import { RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoMongodb, BiLogoPostgresql, BiLogoDjango } from "react-icons/bi";
-import { SiPostgresql, SiMysql, SiPostman } from "react-icons/si";
-import { PiFileSqlLight } from "react-icons/pi";
+import { SiTypescript , SiPostman, SiVite  } from "react-icons/si";
 
 export const NavbarData = [
   {
@@ -50,6 +49,16 @@ export const projectsData = [
   },
   {
     id: 3,
+    title: "Biochem Lab Calculators (BioLab)",
+    info: "A suite of scientific calculators for lab work.",
+    image: calculators,
+    description: "BioLab is a toolset for essential biology and chemistry calculations. It includes calculators for molarity, dilutions, percent solutions, molecular weight, Beer-Lambert law, RCF to RPM conversions, PCR master mix, and unit conversions.",
+    liveLink: "https://biochem-lab-calculators.vercel.app/",
+    githubLink: "https://github.com/torbalansky/biochem-lab-calculators",
+    tech: "React, JavaScript, TailWind CSS",    
+  },
+  {
+    id: 4,
     title: "Chat App",
     info: 'Cross-platform messaging app',
     image: chat,
@@ -58,8 +67,9 @@ export const projectsData = [
     githubLink: "https://github.com/torbalansky/chat-app",
     tech: "React Native, JavaScript, Google Firebase",
   },
+
   // {
-     // id: 4,
+     // id: 5,
      // title: "Meet App",
      // info: 'Event scheduling app',
      // image: meet,
@@ -69,7 +79,7 @@ export const projectsData = [
      // tech: "ReactJS, JavaScript, CSS",
   // },
   // {
-  //   id: 5,
+  //   id: 6,
   //   title: "Movie-API",
   //   image: "",
   //   description: "This REST API acts as a communication bridge between myFlix frontend applications and MongoDB. It enables the retrieval of movie data from the database and handles various user actions such as registration, login, accessing movie details, managing favorites, user info editing, and account deletion.",
@@ -78,7 +88,7 @@ export const projectsData = [
   //   tech: "Node, Express, REST API, MongoDB",
   // },
   // {
-  //   id: 6,
+  //   id: 7,
   //   title: "Myflix App",
   //   image: "",
   //   description: "MyFlix is a client-side movie app created with React, React Bootstrap, Redux, and JavaScript. It allows users to explore a vast collection of movies, find detailed information about each film, and manage their favorites. The app also provides user registration, login, and authentication using JWT tokens, making it a secure and interactive movie platform.",
@@ -89,84 +99,95 @@ export const projectsData = [
 ];
 
 export const techData = [
-  // Web Development
+
   {
     id: 1,
     title: "HTML 5",
     logo: FaHtml5,
-    backgroundColor: "#E44D26", // HTML 5 color
+    backgroundColor: "#E44D26",
   },
   {
     id: 2,
     title: "CSS 3",
     logo: FaCss3Alt,
-    backgroundColor: "#1572B6", // CSS 3 color
+    backgroundColor: "#1572B6",
   },
   {
     id: 3,
     title: "JavaScript",
     logo: RiJavascriptLine,
-    backgroundColor: "#F7E018", // JavaScript color
+    backgroundColor: "#F7E018",
   },
   {
     id: 4,
     title: "React JS",
     logo: RiReactjsFill,
-    backgroundColor: "#61DAFB", // React JS color
+    backgroundColor: "#61DAFB", 
   },
   {
     id: 5,
     title: "Node JS",
     logo: FaNodeJs,
-    backgroundColor: "#68A063", // Node JS color
+    backgroundColor: "#68A063",
   },
   {
     id: 6,
     title: "Tailwind CSS",
     logo: RiTailwindCssFill,
-    backgroundColor: "#38B2AC", // Tailwind CSS color
+    backgroundColor: "#38B2AC",
   },
 
-  // Databases
   {
     id: 7,
     title: "MongoDB",
     logo: BiLogoMongodb,
-    backgroundColor: "#4DB33D", // MongoDB color
+    backgroundColor: "#4DB33D",
   },
   {
     id: 8,
     title: "PostgreSQL",
     logo: BiLogoPostgresql,
-    backgroundColor: "#336791", // PostgreSQL color
+    backgroundColor: "#336791",
   },
 
-  // Languages/Frameworks
   {
     id: 9,
     title: "Python",
     logo: FaPython,
-    backgroundColor: "#306998", // Python color
+    backgroundColor: "#306998",
   },
   {
     id: 10,
     title: "Django",
     logo: BiLogoDjango,
-    backgroundColor: "#092E20", // Django color
+    backgroundColor: "#092E20",
   },
 
   {
     id: 11,
     title: "Postman",
     logo: SiPostman,
-    backgroundColor: "#E44D26", // Django color
+    backgroundColor: "#E44D26",
   },
 
-  // Tools
   {
     id: 12,
     title: "Git",
     logo: FaGitSquare,
-    backgroundColor: "#F05032", // Git color
+    backgroundColor: "#F05032", 
+  },
+
+  {
+    id: 13,
+    title: "TypeScript",
+    logo: SiTypescript,
+    backgroundColor: "#306998",
+  },
+
+  {
+    id: 14,
+    title: "Vite",
+    logo: SiVite,
+    backgroundColor: "#646CFF",
   },
 ];

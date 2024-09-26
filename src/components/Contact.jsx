@@ -76,7 +76,7 @@ const Contact = () => {
       <div className="flex flex-col md:flex-row justify-center items-start gap-6 p-2" data-aos="zoom-in-left">
         <div className="flex flex-col max-w-md w-full text-center md:text-left">
           <div className='mb-4 mt-4 font-mono'>
-            <p className="text-xl mb-2"><strong>Email:</strong> torbalansky.com</p>
+            <p className="text-xl mb-2"><strong>Email:</strong> torbalansky@gmail.com; digilabsrs@gmail.com</p>
             <p className="text-xl mb-2"><strong>Phone:</strong> +359 894 061 189</p>
             <p className="text-xl mb-2"><strong>Address:</strong> Sofia, Bulgaria</p>
           </div>
