@@ -25,7 +25,7 @@ const Work = () => {
         {projectsData.map((project) => (
           <div 
             key={project.id} 
-            className='flex flex-col border-b-2 border-green-200 rounded-lg overflow-hidden shadow-md w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-2 cursor-pointer transition-all duration-200 ease-in-out hover:scale-110'
+            className='flex flex-col border-b-2 border-green-200 rounded-lg overflow-hidden shadow-md shadow-lime-300 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-2 cursor-pointer transition-all duration-200 ease-in-out hover:scale-110'
             onClick={() => openModal(project)}
           >
             <img src={project.image} alt={project.title} className='w-full h-40 object-cover rounded-xl' />

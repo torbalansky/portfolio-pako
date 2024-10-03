@@ -2,6 +2,8 @@ import vamos from '../assets/vamos.png';
 import PEDB from '../assets/pedb.png';
 import calculators from '../assets/calculators.jpg';
 import chat from '../assets/chat.png';
+import movie from '../assets/movie.jpg';
+import movie_api from '../assets/movie_api.jpg'
 import { RiJavascriptLine } from "react-icons/ri";
 import { FaHtml5, FaCss3Alt, FaNodeJs, FaPython, FaGitSquare  } from "react-icons/fa";
 import { RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
@@ -49,8 +51,8 @@ export const projectsData = [
   },
   {
     id: 3,
-    title: "Biochem Lab Calculators (BioLab)",
-    info: "A suite of scientific calculators for lab work.",
+    title: "BioLab App",
+    info: "Scientific calculators for lab work.",
     image: calculators,
     description: "BioLab is a toolset for essential biology and chemistry calculations. It includes calculators for molarity, dilutions, percent solutions, molecular weight, Beer-Lambert law, RCF to RPM conversions, PCR master mix, and unit conversions.",
     liveLink: "https://biochem-lab-calculators.vercel.app/",
@@ -68,8 +70,28 @@ export const projectsData = [
     tech: "React Native, JavaScript, Google Firebase",
   },
 
-  // {
-     // id: 5,
+  {
+    id: 5,
+    title: "Movie-API",
+    info: 'REST API for movie data management',
+    image: movie_api,
+    description: "This REST API acts as a communication bridge between myFlix frontend applications and MongoDB. It enables the retrieval of movie data from the database and handles various user actions such as registration, login, accessing movie details, managing favorites, user info editing, and account deletion.",
+    liveLink: "https://movie-api-eqfh.vercel.app/",
+    githubLink: "https://github.com/torbalansky/movie_api",
+    tech: "Node, Express, REST API, MongoDB",
+    },
+  {
+    id: 6,
+      title: "MyFlix App",
+      info: 'Web app for exploring movies and managing favorites',
+      image: movie,
+      description: "MyFlix Angular is a dynamic and user-friendly web application built with Angular, TypeScript, HTML, and SCSS. Utilizing MongoDB, Express.js, and Node.js on the backend, it allows users to explore movie details, such as descriptions, genres, and directors, and create a personalized list of favorites films.",
+      liveLink: "https://myflix-angular-client-torbalansky.netlify.app/welcome",
+      githubLink: "https://github.com/torbalansky/myFlix-Angular-client",
+      tech: "Angular, TypeScript, HTML, CSS",
+    },
+    // {
+     // id: 7,
      // title: "Meet App",
      // info: 'Event scheduling app',
      // image: meet,
@@ -77,24 +99,6 @@ export const projectsData = [
      // liveLink: "https://torbalansky.github.io/meet/",
      // githubLink: "https://github.com/torbalansky/meet",
      // tech: "ReactJS, JavaScript, CSS",
-  // },
-  // {
-  //   id: 6,
-  //   title: "Movie-API",
-  //   image: "",
-  //   description: "This REST API acts as a communication bridge between myFlix frontend applications and MongoDB. It enables the retrieval of movie data from the database and handles various user actions such as registration, login, accessing movie details, managing favorites, user info editing, and account deletion.",
-  //   liveLink: "https://movie-api-eqfh.vercel.app/",
-  //   githubLink: "https://github.com/torbalansky/movie_api",
-  //   tech: "Node, Express, REST API, MongoDB",
-  // },
-  // {
-  //   id: 7,
-  //   title: "Myflix App",
-  //   image: "",
-  //   description: "MyFlix is a client-side movie app created with React, React Bootstrap, Redux, and JavaScript. It allows users to explore a vast collection of movies, find detailed information about each film, and manage their favorites. The app also provides user registration, login, and authentication using JWT tokens, making it a secure and interactive movie platform.",
-  //   liveLink: "https://myflix-torbalansky.netlify.app/login",
-  //   githubLink: "https://github.com/torbalansky/myFlix-client",
-  //   tech: "ReactJS, Redux, CSS",
   // },
 ];
 
