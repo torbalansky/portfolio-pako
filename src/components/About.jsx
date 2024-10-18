@@ -30,15 +30,15 @@ const About = () => {
             <p className='p-2 font-mono text-left' data-aos='fade-up'>
               Hearing about Dolly the Sheep (5th of July 1996) sparked my fascination with molecular biology. So I ended up defending:
             </p>
-            <LadderStep title="Ph.D. in Biochemistry" icon={<GiGraduateCap className="w-10 h-10" />} />
+            <LadderStep title="Ph.D. in Molecular Biology" icon={<GiGraduateCap className="w-10 h-10" />} />
             <p className='p-2 font-mono text-left' data-aos='fade-up'>
               Gained a solid foundation in molecular biology, focusing on nanotech and protein post-translational modification.
             </p>
             <LadderStep title="2nd Big Inspiration: Coding Discovery" icon={<FaLaptopCode className="w-10 h-10" />} />
             <p className='p-2 font-mono text-left' data-aos='fade-up'>
-              During my second postdoc, I felt the same excitement I had for Dolly when I discovered coding. It opened a new world for me—new languages, a way of communicating with machines, and new ways of understanding the world. Since that moment, I’ve committed myself to becoming a developer, eager to explore and innovate through code.
-            <br /> I am currently seeking a company where I can learn and grow, aspiring to become a coding guru one day.
-            The complexity and variety of stacks I need to master can be overwhelming, but I am patient and willing to put in the effort.
+            During my second postdoc, I felt the same excitement I had for Dolly when I discovered coding. It opened a new world for me—new languages, a way of communicating with machines, and new ways of understanding the world. Since that moment, I’ve committed myself to becoming a developer, eager to explore and innovate through code.
+            <br /><br /> In addition to my development journey, I am also passionate about Quality Assurance. I completed a course in QA at SoftUni, which deepened my interest in this field. My research background makes me well-suited for QA, as I am detail-oriented and have a keen eye for discrepancies. I possess strong analytical and problem-solving skills, and excellent attention to detail. 
+            <br /><br />I am currently seeking a company where I can learn and grow in the tech world. The complexity and variety of stacks I need to master can be overwhelming, but I am patient and willing to put in the effort.
             </p>
             <LadderStep title="Hobbies" icon={<BsHeadsetVr className="w-10 h-10" />} />
             <p className='p-2 font-mono text-left' data-aos='fade-up'>

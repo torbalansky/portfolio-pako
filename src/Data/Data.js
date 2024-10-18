@@ -8,7 +8,7 @@ import { RiJavascriptLine } from "react-icons/ri";
 import { FaHtml5, FaCss3Alt, FaNodeJs, FaPython, FaGitSquare  } from "react-icons/fa";
 import { RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoMongodb, BiLogoPostgresql, BiLogoDjango } from "react-icons/bi";
-import { SiTypescript , SiPostman, SiVite  } from "react-icons/si";
+import { SiTypescript , SiPostman, SiVite, SiSelenium, SiJira } from "react-icons/si";
 
 export const NavbarData = [
   {
@@ -198,5 +198,19 @@ export const techData = [
     title: "Vite",
     logo: SiVite,
     backgroundColor: "#646CFF",
+  },
+
+  {
+    id: 15,
+    title: "Selenium",
+    logo: SiSelenium,
+    backgroundColor: "#4DB33D",
+  },
+
+  {
+    id: 16,
+    title: "Jira",
+    logo: SiJira,
+    backgroundColor: "#1572B6",
   },
 ];
