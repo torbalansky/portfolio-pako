@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Work from './components/Work';
 import Contact from './components/Contact';
+import About from './components/About';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -40,6 +41,9 @@ const App = () => {
             <>
               <Element name="hero">
                 <Hero />
+              </Element>
+              <Element name="about">
+                <About />
               </Element>
               <Element name="work">
                 <Work />

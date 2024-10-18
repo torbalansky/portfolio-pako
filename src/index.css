@@ -4,52 +4,112 @@
 
 .rotate-360 {
     transition: transform 0.5s ease-in-out;
-  }
-  
-  .rotate-360:hover {
+}
+
+.rotate-360:hover {
     transform: rotate(360deg);
-  }
+}
 
 .theme-move {
-  transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
 
 .theme-move.move-up {
-  animation: moveUp 1s ease-in-out;
+    animation: moveUp 1s ease-in-out;
 }
 
 .theme-move.move-down {
-  animation: moveDown 1s ease-in-out;
+    animation: moveDown 1s ease-in-out;
 }
 
 @keyframes moveUp {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-30px); }
-  100% { transform: translateY(0); }
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
 }
 
 @keyframes moveDown {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(30px); }
-  100% { transform: translateY(0); }
+    0% { transform: translateY(0); }
+    50% { transform: translateY(30px); }
+    100% { transform: translateY(0); }
 }
 
-@media (max-width: 900px) and (min-width: 300px) { 
-  .hero-section h2 {
-  font-size: large;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  }
+.about-section {
+    padding: 20px;
+}
+
+.ladder-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ladder {
+    width: 100%;
+    border-left: 5px solid #a0b4ab;
+    border-right: 5px solid #a0b4ab;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ladder-step {
+    position: relative;
+    padding-left: 20px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.ladder-step:nth-child(odd) {
+    background-color: #a0b4ab;
+}
+
+.step-icon {
+    position: absolute;
+    left: -80px;
+}
+
+@media (max-width: 900px) {
+    .about-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .ladder-step {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ladder {
+        border-left: none;
+        border-right: none;
+    }
+
+    .step-icon {
+        position: static;
+        margin-bottom: 5px;
+    }
 }
 
 @media (max-width: 1400px) and (min-width: 800px) { 
-  .hero-section h2 {
-  font-size: 28px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  }
+    .hero-section h2 {
+        font-size: 28px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 
-  .hero-section p {
-    font-size: 24px;
-  }
+    .hero-section p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 900px) and (min-width: 300px) { 
+    .hero-section h2 {
+        font-size: large;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }

@@ -18,11 +18,16 @@ export const NavbarData = [
   },
   {
     id: 2,
+    title: "About",
+    link: "about",
+  },
+  {
+    id: 3,
     title: "Work",
     link: "work",
   },
   {
-    id: 3,
+    id: 4,
     title: "Contact",
     link: "contact",
   },
