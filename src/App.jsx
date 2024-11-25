@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import About from './components/About';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import Maintenance from './components/Maintenance';
 
 const App = () => {
   useEffect(() => {
@@ -33,13 +34,17 @@ const App = () => {
 
   return (
     <Router>
-      <Navbar />
+      {/*<Navbar />*/}
       <Routes>
         <Route
           path="/"
           element={
             <>
-              <Element name="hero">
+            <Element name="maintenance">
+                <Maintenance />
+              </Element>
+
+              {/* <Element name="hero">
                 <Hero />
               </Element>
               <Element name="about">
@@ -50,7 +55,7 @@ const App = () => {
               </Element>
               <Element name="contact">
                 <Contact />
-              </Element>
+              </Element> */}
             </>
           }
         />
