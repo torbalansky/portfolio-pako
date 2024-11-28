@@ -34,17 +34,17 @@ const App = () => {
 
   return (
     <Router>
-      {/*<Navbar />*/}
+      <Navbar />
       <Routes>
         <Route
           path="/"
           element={
             <>
-            <Element name="maintenance">
+             {/* <Element name="maintenance">
                 <Maintenance />
-              </Element>
+              </Element> */}
 
-              {/* <Element name="hero">
+              <Element name="hero">
                 <Hero />
               </Element>
               <Element name="about">
@@ -55,7 +55,7 @@ const App = () => {
               </Element>
               <Element name="contact">
                 <Contact />
-              </Element> */}
+              </Element> 
             </>
           }
         />

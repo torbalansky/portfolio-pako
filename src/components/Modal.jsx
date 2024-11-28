@@ -16,7 +16,7 @@ const Modal = ({ isOpen, onClose, project }) => {
       <div className="relative bg-white py-4 px-4 max-w-lg w-full rounded-lg shadow-lg z-50">
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 text-2xl text-black border-none px-2"
+          className="close-btn absolute top-2 right-2 text-2xl text-black border-none px-2"
         >
           &times;
         </button>

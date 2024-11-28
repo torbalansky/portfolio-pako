@@ -10,7 +10,7 @@ const LadderStep = ({ title, icon }) => (
   <div className="ladder-step flex items-center mb-4" data-aos='zoom-in'>
     <div className="step-icon mr-3" data-aos='zoom-in'>{icon}</div>
     <div className="step-title" data-aos='zoom-in'>
-      <h3 className="font-semibold text-lg" data-aos='zoom-in'>{title}</h3>
+      <h3 className="font-semibold text-lg ladder-title" data-aos='zoom-in'>{title}</h3>
     </div>
   </div>
 );
@@ -36,8 +36,8 @@ const About = () => {
             </p>
             <LadderStep title="2nd Big Inspiration: Coding Discovery" icon={<FaLaptopCode className="w-10 h-10" />} />
             <p className='p-2 font-mono text-left' data-aos='fade-up'>
-            During my second postdoc, I felt the same excitement I had for Dolly when I discovered coding. It opened a new world for me—new languages, a way of communicating with machines, and new ways of understanding the world. Since that moment, I’ve committed myself to becoming a developer, eager to explore and innovate through code.
-            <br /><br /> In addition to my development journey, I am also passionate about Quality Assurance. I completed a course in QA at SoftUni, which deepened my interest in this field. My research background makes me well-suited for QA, as I am detail-oriented and have a keen eye for discrepancies. 
+              During my second postdoc, I discovered coding, which opened up a new world of languages and problem-solving. This journey naturally led me to Quality Assurance, where my research background honed my attention to detail and precision. Completing a QA course at SoftUni solidified my skills in manual testing, bug reporting, and test planning while sparking my interest in automation.  
+              <br /><br /> QA combines my love for systematic problem-solving with a focus on software quality, making it the field I am excited to pursue.
             </p>
             <LadderStep title="Hobbies" icon={<BsHeadsetVr className="w-10 h-10" />} />
             <p className='p-2 font-mono text-left' data-aos='fade-up'>

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { projectsData } from '../Data/Data';
 import SectionWrapper from '../Data/SectionWrapper';
 import Modal from './Modal';
-import TechStack from './TechStack';
 
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -20,24 +19,24 @@ const Work = () => {
 
   return (
     <SectionWrapper>
-      <h1 className='text-center text-2xl font-bold mt-20 mb-6'>Projects</h1>
-      <div className='flex flex-wrap justify-center gap-12' data-aos='zoom-in'>
+      <h1 className='text-center text-2xl font-bold mt-20 mb-4'>Projects</h1>
+      <div className='flex flex-wrap justify-center gap-4' data-aos='zoom-in'>
         {projectsData.map((project) => (
           <div 
             key={project.id} 
-            className='flex flex-col border-b-2 border-green-200 rounded-lg overflow-hidden shadow-md shadow-lime-300 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-2 cursor-pointer transition-all duration-200 ease-in-out hover:scale-110'
+            className='flex flex-col border-b-2 border-green-200 rounded-lg overflow-hidden shadow-md shadow-lime-300 w-full sm:w-1/2 md:w-1/3 lg:w-1/2 xl:w-1/6 p-2 cursor-pointer transition-all duration-200 ease-in-out hover:scale-110'
             onClick={() => openModal(project)}
           >
             <img src={project.image} alt={project.title} className='w-full h-40 object-cover rounded-xl' />
             <div className='p-3'>
               <h2 className='text-md text-center mb-1'>{project.title}</h2>
-              <h3 className='text-sm font-mono text-center mb-2'>{project.info}</h3>
+              <h3 className='text-sm font-mono text-left mb-2'>{project.info}</h3>
+              <h4 className='text-xs font-mono text-left'><strong>Tech:</strong> {project.tech}</h4>
             </div>
           </div>
         ))}
       </div>
       {isModalOpen && <Modal isOpen={isModalOpen} onClose={closeModal} project={selectedProject} />}
-      <TechStack />
     </SectionWrapper>
   );
 };

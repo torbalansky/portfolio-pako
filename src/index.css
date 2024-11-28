@@ -79,18 +79,32 @@
     }
 
     .ladder-step {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: flex-start;  
+    }
+
+    .ladder-title {
+        font-size: 10px;
     }
 
     .ladder {
         border-left: none;
         border-right: none;
+        font-size: 14px !important;
     }
 
     .step-icon {
         position: static;
         margin-bottom: 5px;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10;
+        right: 2;
+        color: red;
+        background-color: aliceblue;
+        border-radius: 50%;
     }
 }
 

@@ -3,9 +3,9 @@ import { techData } from '../Data/Data';
 
 const TechStack = () => {
   return (
-    <section className='mt-24' data-aos="zoom-in-right">
-      <div className='flex flex-wrap justify-center gap-4'>
-      <h2 className='text-center text-sm mt-2'>Skills:</h2>
+    <section className='mt-8' data-aos="zoom-in-right">
+      <div className='flex flex-wrap justify-center gap-2'>
+      <h3 className='text-center text-xl mt-2 font-mono'>Skills:</h3>
         {techData.map((tech) => {
           const LogoComponent = tech.logo;
           return (

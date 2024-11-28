@@ -1,6 +1,8 @@
 import SectionWrapper from '../Data/SectionWrapper';
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { PiLinkedinLogo } from "react-icons/pi";
+import { LiaGithubSquare, LiaResearchgate } from "react-icons/lia";
 
 const Contact = () => {
   const formRef = useRef();
@@ -80,6 +82,17 @@ const Contact = () => {
             <p className="text-xl mb-2"><strong>Phone:</strong> +359 894 061 189</p>
             <p className="text-xl mb-2"><strong>Address:</strong> Sofia, Bulgaria</p>
           </div>
+          <div className="flex justify-center md:justify-start gap-4 mt-2 mb-4 items-center">
+            <a href="https://www.linkedin.com/in/srstathis" target="_blank" rel="noopener noreferrer">
+              <PiLinkedinLogo className="w-9 h-9 md:w-11 md:h-11 cursor-pointer transition-all duration-200 ease-in-out hover:scale-110" />
+            </a>
+            <a href="https://github.com/torbalansky" target="_blank" rel="noopener noreferrer">
+              <LiaGithubSquare className="w-10 h-10 md:w-12 md:h-12 cursor-pointer transition-all duration-200 ease-in-out hover:scale-110" />
+            </a>
+            <a href="https://www.researchgate.net/profile/Silviya-Stateva" target="_blank" rel="noopener noreferrer">
+              <LiaResearchgate className="w-10 h-10 md:w-12 md:h-12 cursor-pointer transition-all duration-200 ease-in-out hover:scale-110" />
+            </a>
+          </div>
         </div>
         <form
           ref={formRef}
@@ -123,9 +136,6 @@ const Contact = () => {
           </div>
         </form>
       </div>
-      <div className="text-center mt-8 p-11 bottom-0 left-0 opacity-90 text-xs">
-          © 2024 <a href="https://github.com/torbalansky" className="text-green-400 hover:text-red-200">Paco/torbalansky</a>
-        </div>
     </SectionWrapper>
   );
 };
