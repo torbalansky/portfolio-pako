@@ -3,6 +3,7 @@ import PEDB from '../assets/pedb.png';
 import calculators from '../assets/calculators.jpg';
 import chat from '../assets/chat.png';
 import movie from '../assets/movie.jpg';
+import quiz from '../assets/quiz.png'
 import movie_api from '../assets/movie_api.jpg'
 import { RiJavascriptLine } from "react-icons/ri";
 import meet from '../assets/meet_logo.png';
@@ -52,7 +53,7 @@ export const projectsData = [
     info: 'Event scheduling app.',
     image: meet,
     description: "MeetApp is a web application developed following the principles of test-driven development. It's designed to work without needing a server and is built using technologies like React and JavaScript. It also makes use of the Google Calendar API to get information about upcoming events and relies on AWS Lambda to handle user access securely.",
-    liveLink: "https://torbalansky.github.io/meet/",
+    // liveLink: "https://torbalansky.github.io/meet/",
     githubLink: "https://github.com/torbalansky/meet",
     tech: "ReactJS, JavaScript, Jest, Puppeteer, Cucumber, Gherkin",
   },
@@ -66,16 +67,17 @@ export const projectsData = [
     githubLink: "https://github.com/torbalansky/biochem-lab-calculators",
     tech: "React, JavaScript, Tailwind CSS, Cypress",  
   },
-  //  {
-  //   id: 4,
-  //   title: "Chat App",
-  //  info: 'Cross-platform messaging app',
-  //  image: chat,
-  //  description: "ChatApp is a cross-platform messaging application built with React Native and Expo. It enables users to chat, share images, and location. The app utilizes Google Firebase for user authentication and stores data both online and offline.",
-  //  liveLink: "https://github.com/torbalansky/chat-app",
-  //  githubLink: "https://github.com/torbalansky/chat-app",
-  //  tech: "React Native, JavaScript, Google Firebase",
-  //},
+
+  {
+    id: 4,
+    title: "QuizApp",
+    info: 'QA related quiz app for beginners.',
+    image: quiz,
+    description: "QuizApp is a beginner-friendly web app designed to help you learn and test your knowledge of fundamental Quality Assurance (QA) concepts. It covers key topics such as the Software Testing Life Cycle (STLC), QA principles, and basic testing techniques. With interactive quizzes and practical tools, QuizApp makes learning QA concepts easy and fun, perfect for those just starting their journey in software testing.",
+    liveLink: "https://quiza-qa.netlify.app/",
+    githubLink: "https://github.com/torbalansky/manual-QA",
+    tech: "React, JavaScript, Tailwind CSS",
+  },  
 
   {
     id: 5,
@@ -108,6 +110,17 @@ export const projectsData = [
   //  githubLink: "https://github.com/torbalansky/restaurant-website",
   // tech: "React, Vite",
  // },
+
+   //  {
+  //   id: 4,
+  //   title: "Chat App",
+  //  info: 'Cross-platform messaging app',
+  //  image: chat,
+  //  description: "ChatApp is a cross-platform messaging application built with React Native and Expo. It enables users to chat, share images, and location. The app utilizes Google Firebase for user authentication and stores data both online and offline.",
+  //  liveLink: "https://github.com/torbalansky/chat-app",
+  //  githubLink: "https://github.com/torbalansky/chat-app",
+  //  tech: "React Native, JavaScript, Google Firebase",
+  //},
 ];
 
 export const techData = [
