@@ -8,7 +8,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ['"Press Start 2P"'],
-        mono: ['"Roboto Mono"']
+        mono: ['"Roboto Mono"'],
+        poppins: ['"Poppins"']
       },
 
       container: {

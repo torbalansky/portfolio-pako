@@ -3,23 +3,36 @@ import { NavbarData } from '../Data/Data';
 import { IoMenuSharp, IoSunnyOutline, IoCloudyNightOutline } from "react-icons/io5";
 import { useTheme } from '../Data/Theme';
 import { Link, scroller } from 'react-scroll';
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
   const [themeIconAnimation, setThemeIconAnimation] = useState('');
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  const scrollToHero = () => {
-    scroller.scrollTo('hero', {
-      duration: 800,
-      delay: 0,
-      smooth: 'easeInOutQuart',
-    });
+  const styles = {
+    nav: `py-5 top-0 z-50 sticky shadow-md ${
+      theme === 'light' ? 'bg-slate-50' : 'bg-slate-800'
+    }`,
+    container: 'container flex justify-between items-center px-4',
+    logo: 'w-20 rotate-360 cursor-pointer hover:scale-105 transition-transform duration-200',
+    menuIcon: `text-3xl cursor-pointer ${
+      theme === 'light' ? 'text-slate-800' : 'text-white'
+    }`,
+    navLink: `inline-block py-2 px-3 lowercase text-[18px] transition-all duration-200 ease-in-out relative group cursor-pointer ${
+      theme === 'light' ? 'text-slate-800' : 'text-white'
+    }`,
+    linkUnderline: `block absolute left-0 bottom-0 w-full h-[2px] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 ease-in-out ${
+      theme === 'light' ? 'bg-blue-500' : 'bg-green-500'
+    }`,
+    dropdown: `md:hidden absolute right-2 mt-2 py-2 px-4 rounded-lg shadow-lg ${
+      theme === 'light' ? 'bg-white' : 'bg-slate-700'
+    }`,
+    dropdownLink: `block py-2 px-3 lowercase text-md hover:${
+      theme === 'light' ? 'bg-slate-100' : 'bg-slate-600'
+    } rounded transition-colors duration-200 ${
+      theme === 'light' ? 'text-slate-800' : 'text-white'
+    }`
   };
 
   const handleThemeIconClick = () => {
@@ -30,19 +43,28 @@ const Navbar = () => {
     }, 500);
   };
 
-  const navbarColor = theme === 'light' ? 'bg-yellow-50 text-slate-800' : 'bg-slate-800 text-white';
-  const iconColor = theme === 'light' ? 'text-slate-800' : 'text-white';
+  const scrollToHero = () => {
+    scroller.scrollTo('hero', {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+    });
+  };
 
-  const dropdownBgColor = theme === 'light' ? 'bg-white' : 'bg-slate-800';
-  const dropdownTextColor = theme === 'light' ? 'text-slate-800' : 'text-white';
   const ThemeIcon = theme === 'light' ? IoSunnyOutline : IoCloudyNightOutline;
 
   return (
-    <nav className={`py-5 top-0 z-50 sticky shadow-md ${navbarColor}`}>
-      <div className='container flex justify-between items-center'>
-        <div className={`flex items-center gap-1 font-semibold text-2xl ${iconColor}`}>
-          <img src={logo} className='w-20 rotate-360 cursor-pointer' onClick={scrollToHero}/>
+    <nav className={styles.nav}>
+      <div className={styles.container}>
+        <div className="flex items-center gap-1">
+          <img 
+            src={logo} 
+            className={styles.logo}
+            onClick={scrollToHero}
+            alt="Logo"
+          />
         </div>
+
         <div className='hidden md:block'>
           <ul className='flex items-center gap-4'>
             {NavbarData.map((item) => (
@@ -51,35 +73,42 @@ const Navbar = () => {
                   to={item.link}
                   smooth={true}
                   duration={500}
-                  className={`inline-block py-2 px-3 lowercase text-[18px] ${iconColor} transition-all duration-200 ease-in-out relative group cursor-pointer`}
+                  className={styles.navLink}
                 >
                   {item.title}
-                  <span className="block absolute left-0 bottom-0 w-full h-[2px] bg-green-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 ease-in-out"></span>
+                  <span className={styles.linkUnderline}></span>
                 </Link>
               </li>
             ))}
           </ul>
         </div>
-        <div className='flex items-center'>
+
+        <div className='flex items-center gap-4'>
           <ThemeIcon 
             onClick={handleThemeIconClick} 
-            className={`w-6 h-6 cursor-pointer ${iconColor} theme-move ${themeIconAnimation}`}
+            className={`w-6 h-6 cursor-pointer ${themeIconAnimation} ${
+              theme === 'light' ? 'text-slate-800' : 'text-white'
+            } hover:scale-110 transition-transform duration-200`}
           />
-        </div>
-        <div className='md:hidden' onClick={toggleMenu}>
-          <IoMenuSharp className={`text-3xl cursor-pointer ${iconColor}`} />
+          <div className='md:hidden'>
+            <IoMenuSharp 
+              className={styles.menuIcon} 
+              onClick={() => setMenuOpen(!menuOpen)}
+            />
+          </div>
         </div>
       </div>
+
       {menuOpen && (
-        <div className={`md:hidden absolute right-2 mt-2 ${dropdownBgColor}`}>
-          <ul className='flex flex-col gap-2'>
+        <div className={styles.dropdown}>
+          <ul className='flex flex-col gap-1'>
             {NavbarData.map((item) => (
               <li key={item.id}>
                 <Link
                   to={item.link}
                   smooth={true}
                   duration={500}
-                  className={`inline-block py-2 px-3 lowercase text-md ${dropdownTextColor} cursor-pointer`}
+                  className={styles.dropdownLink}
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.title}

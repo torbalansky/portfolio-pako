@@ -3,8 +3,9 @@ import PEDB from '../assets/pedb.png';
 import calculators from '../assets/calculators.jpg';
 import chat from '../assets/chat.png';
 import movie from '../assets/movie.jpg';
-import quiz from '../assets/quiz.png'
-import movie_api from '../assets/movie_api.jpg'
+import quiz from '../assets/quiz.png';
+import movie_api from '../assets/movie_api.jpg';
+import recipe_app from '../assets/recipe_app.jpg';
 import { RiJavascriptLine } from "react-icons/ri";
 import meet from '../assets/meet_logo.png';
 import { FaHtml5, FaCss3Alt, FaNodeJs, FaPython, FaGitSquare  } from "react-icons/fa";
@@ -39,58 +40,164 @@ export const projectsData = [
   {
     id: 1,
     title: "PEDB",
-    info: 'Protein Phosphorylation DB.',
+    info: "Bioinformatics Platform with Selenium Testing",
     image: PEDB,
-    description: "PEDB is a comprehensive web application built with Django, Python, HTML, CSS, and JavaScript. It offers an intuitive interface for exploring protein phosphorylation data in E. coli. Users can quickly search for phosphoproteins and their phosphosites. The platform provides detailed views of phosphosites, including interactive charts, sequence highlights, and references.",
+    description: "A comprehensive bioinformatics database for phosphoproteins, featuring Selenium testing. The platform implements advanced data visualization, user authentication, and scientific data management with robust testing for data integrity and user interactions.",
     liveLink: "https://pedb.onrender.com/",
     githubLink: "https://github.com/torbalansky/phosphoecoli",
-    tech: "Django, Python, Selenium",
+    tech: [
+      "Django",
+      "Python",
+      "PostgreSQL",
+      "Selenium",
+      "Plotly",
+      "Matplotlib",
+      "xhtml2pdf"
+    ],
+    highlights: [
+      "Interactive protein visualization",
+      "Advanced search functionality",
+      "PDF export capabilities",
+      "User profile management",
+      "Data submission workflow",
+      "Email notification system"
+    ],
+    testingScope: [
+      "Profile management validation",
+      "Search functionality testing",
+      "Data visualization verification",
+      "Form validation testing",
+      "Email service integration",
+      "Database CRUD operations",
+      "User permission controls"
+    ]
   },
 
   {
     id: 2,
     title: "MeetApp",
-    info: 'Event scheduling app.',
+    info: "Event Platform with BDD Testing",
     image: meet,
-    description: "MeetApp is a web application developed following the principles of test-driven development. It's designed to work without needing a server and is built using technologies like React and JavaScript. It also makes use of the Google Calendar API to get information about upcoming events and relies on AWS Lambda to handle user access securely.",
-    // liveLink: "https://torbalansky.github.io/meet/",
+    description: "A serverless event management application showcasing behavior-driven development (BDD) practices using Cucumber and Gherkin. Features comprehensive test coverage including integration tests, end-to-end scenarios, and OAuth authentication validation.",
     githubLink: "https://github.com/torbalansky/meet",
-    tech: "ReactJS, JavaScript, Jest, Puppeteer, Cucumber, Gherkin",
+    tech: ["React", "AWS Lambda", "Jest", "Puppeteer", "Cucumber", "Gherkin"],
+    highlights: [
+      "BDD testing implementation",
+      "OAuth authentication testing",
+      "Offline functionality validation",
+      "Integration with Google Calendar API",
+      "End-to-end test scenarios"
+    ],
+    testingScope: [
+      "User authentication flows",
+      "Event data synchronization",
+      "Offline mode functionality",
+      "Cross-browser compatibility",
+      "API integration testing"
+    ]
   },
+
   {
     id: 3,
     title: "BioLabApp",
-    info: "Scientific calculators app.",
+    info: "Laboratory Calculator Suite with E2E Testing",
     image: calculators,
-    description: "BioLab is a toolset for essential biology and chemistry calculations. It includes calculators for molarity, dilutions, percent solutions, molecular weight, Beer-Lambert law, RCF to RPM conversions, PCR master mix, and unit conversions.",
+    description: "A comprehensive scientific calculator suite developed with test-driven practices, featuring automated testing with Cypress. This application streamlines laboratory calculations while demonstrating modern QA practices including E2E testing, component testing, and responsive design validation.",
     liveLink: "https://biochem-lab-calculators.vercel.app/",
     githubLink: "https://github.com/torbalansky/biochem-lab-calculators",
-    tech: "React, JavaScript, Tailwind CSS, Cypress",  
+    tech: ["React", "JavaScript", "Tailwind CSS", "Cypress"],
+    highlights: [
+      "End-to-end testing with Cypress",
+      "Input validation and error handling",
+      "Cross-browser compatibility testing",
+      "Responsive design verification",
+      "Unit tests for calculation accuracy"
+    ],
+    testingScope: [
+      "Input boundary testing",
+      "Calculation precision validation",
+      "UI/UX responsiveness",
+      "Error message verification"
+    ]
   },
 
   {
     id: 4,
     title: "QuizApp",
-    info: 'QA related quiz app for beginners.',
+    info: "Interactive QA Learning Platform with E2E Testing",
     image: quiz,
-    description: "QuizApp is a beginner-friendly web app designed to help you learn and test your knowledge of fundamental Quality Assurance (QA) concepts. It covers key topics such as the Software Testing Life Cycle (STLC), QA principles, and basic testing techniques. With interactive quizzes and practical tools, QuizApp makes learning QA concepts easy and fun, perfect for those just starting their journey in software testing.",
+    description: "A comprehensive QA learning platform featuring interactive quizzes and practical exercises, extensively tested using Cypress. The application demonstrates modern testing practices through both its content and implementation, including E2E testing, component testing, and responsive design validation.",
     liveLink: "https://quiza-qa.netlify.app/",
     githubLink: "https://github.com/torbalansky/manual-QA",
-    tech: "React, JavaScript, Tailwind CSS",
+    tech: ["React", "JavaScript", "Tailwind CSS", "Cypress", "EmailJS", "KaTeX"],
+    highlights: [
+      "Interactive STLC drag-and-drop quiz",
+      "QA metrics calculator with formulas",
+      "Age estimator with test cases",
+      "Contact form with validation",
+      "Responsive design implementation",
+      "Real-time feedback system"
+    ],
+    testingScope: [
+      "E2E navigation testing",
+      "Drag-and-drop functionality",
+      "Form validation and submission",
+      "Email service integration tests",
+      "Error handling scenarios",
+      "Metrics calculation accuracy"
+    ]
   },  
 
   {
     id: 5,
     title: "Movie-API",
-    info: 'REST API for movie data management.',
+    info: "RESTful API with Comprehensive Testing",
     image: movie_api,
-    description: "This REST API acts as a communication bridge between myFlix frontend applications and MongoDB. It enables the retrieval of movie data from the database and handles various user actions such as registration, login, accessing movie details, managing favorites, user info editing, and account deletion.",
+    description: "A robust REST API showcasing best practices in API testing and documentation. Built with a focus on security testing, performance monitoring, and comprehensive API documentation. Features include automated testing suites, security implementations, and thorough error handling.",
     liveLink: "https://movie-api-eqfh.vercel.app/",
     githubLink: "https://github.com/torbalansky/movie_api",
-    tech: "Node, Express, REST API, MongoDB, Postman",
-    },
+    tech: ["Node.js", "Express", "MongoDB", "Postman"],
+    highlights: [
+      "Comprehensive API documentation",
+      "Authentication & authorization testing",
+      "Database integration testing",
+      "Performance monitoring",
+      "Security implementation"
+    ],
+    testingScope: [
+      "API endpoint validation",
+      "Rate limiting verification",
+      "Error handling scenarios",
+      "Data integrity checks"
+    ]
+  },
+{
+  id: 6,
+  title: "Recipe App",
+  info: "Django-based Recipe Management Platform",
+  image: recipe_app,
+  description: "A comprehensive recipe management platform built with Django and PostgreSQL, featuring extensive test coverage using pytest. The application implements model testing, view validation, form handling, and user interaction testing while providing users with recipe management, social interactions, and data visualization capabilities.",
+  githubLink: "https://github.com/torbalansky/recipe-app",
+  tech: ["Django", "Python", "PostgreSQL", "Bootstrap", "pytest", "Chart.js"],
+  highlights: [
+    "Recipe CRUD operations",
+    "Interactive commenting system",
+    "Recipe difficulty calculation",
+    "Data visualization with charts",
+    "Search and filter functionality",
+    "PostgreSQL database integration"
+  ],
+  testingScope: [
+    "Model validation and relationships",
+    "Recipe difficulty calculation tests",
+    "View functionality and routing",
+    "Form validation and submission",
+    "Comment system testing",
+    "Chart generation validation"
+  ]
+},
   //  {
-  //    id: 6,
+  //    id: 7,
   //      title: "MyFlix App",
   //      info: 'Web app for exploring movies and managing favorites',
   //     image: movie,
