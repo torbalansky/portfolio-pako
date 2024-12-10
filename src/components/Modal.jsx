@@ -11,7 +11,7 @@ const Modal = ({ isOpen, onClose, project }) => {
       onClick={handleBackdropClick}
     >
       <div className="relative bg-white dark:bg-gray-800 w-full max-w-2xl rounded-xl shadow-2xl my-4">
-        <div className="relative h-56 overflow-hidden">
+        <div className="relative h-72 overflow-hidden">
           <img 
             src={project.image} 
             alt={project.title} 
@@ -24,7 +24,7 @@ const Modal = ({ isOpen, onClose, project }) => {
           </div>
           <button
             onClick={onClose}
-            className="absolute top-14 right-2 p-2 rounded-full bg-black/20 hover:bg-black/40 text-white transition-all"
+            className="absolute p-2 bottom-0 right-0 bg-slate-600 hover:bg-black/40 text-white transition-all"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

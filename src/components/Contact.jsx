@@ -145,7 +145,7 @@ const Contact = () => {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className={`w-full md:w-1/2 max-w-md p-6 rounded-lg shadow-md ${
+            className={`w-full md:w-1/2 max-w-md p-6 rounded-lg shadow-md font-serif ${
               theme === 'light' ? 'bg-white' : 'bg-slate-800'
             }`}
           >
@@ -180,7 +180,7 @@ const Contact = () => {
               {error && <p className="text-red-500 font-mono">{error}</p>}
              <button
               type="submit"
-              className="w-full py-2 font-bold text-white bg-gradient-to-r from-indigo-600 to-indigo-600 bg-[length:200%_100%] bg-left hover:bg-right hover:from-green-400 hover:to-blue-500 transition-all duration-500 ease-out"
+              className="w-full font-sans py-2 font-bold text-white bg-gradient-to-r from-indigo-600 to-indigo-600 bg-[length:200%_100%] bg-left hover:bg-right hover:from-green-400 hover:to-blue-500 transition-all duration-500 ease-out"
               >
               {loading ? 'Sending...' : 'Send'}
               </button>

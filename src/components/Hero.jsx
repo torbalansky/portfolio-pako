@@ -16,9 +16,9 @@ const Hero = () => {
 
   return (
     <SectionWrapper>
-      <div className="container mt-12 mx-auto px-4 min-h-[calc(100vh-4rem)]">
+      <div className="container mt-28 mx-auto px-4 min-h-[calc(100vh-200px)]">
         <div 
-          className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 h-full py-12"
+          className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 h-full py-8"
           data-aos="fade-up"
           data-aos-duration="1000"
         >

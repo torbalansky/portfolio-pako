@@ -23,7 +23,7 @@ const Work = () => {
       <h1 className='text-center text-3xl font-bold mt-16 mb-6'>
         QA Projects Portfolio
       </h1>
-      <div className='max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-2' data-aos='zoom-in'>
+      <div className='max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-2' data-aos='zoom-in'>
         {projectsData.map((project) => (
           <div 
             key={project.id} 
@@ -38,7 +38,7 @@ const Work = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-lime-100/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
-            <div className='p-3'>
+            <div className='p-3 font-serif'>
               <h2 className='text-lg text-gray-700 font-bold mb-1'>{project.title}</h2>
                 <p className='text-gray-600 dark:text-gray-300 mb-2 text-sm'>{project.info}</p>
                 <div className='flex flex-wrap gap-1'>

@@ -52,8 +52,8 @@ const TimelineStep = ({ title, Icon, content }) => {
         <Icon className={`w-5 h-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${theme === 'light' ? 'text-slate-800' : 'text-white'}`} />
       </div>
       <div className="ml-4">
-        <h3 className="font-semibold text-lg mb-2">{title}</h3>
-        <p className="text-sm leading-relaxed">{content}</p>
+        <h3 className="font-semibold text-lg mb-2 font-serif">{title}</h3>
+        <p className="text-md leading-relaxed font-poppins">{content}</p>
       </div>
     </div>
   );
@@ -80,7 +80,7 @@ const About = () => {
           ))}
         </div>
         
-        <div className="mt-8 flex flex-wrap gap-4 justify-center" data-aos='fade-up'>
+        <div className="mt-8 flex flex-wrap gap-4 justify-center font-serif" data-aos='fade-up'>
           {[
             { Icon: MdOutlineTravelExplore, label: 'Travel' },
             { Icon: MdOutlineEmojiNature, label: 'Nature' },

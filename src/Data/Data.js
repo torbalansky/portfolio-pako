@@ -76,7 +76,7 @@ export const projectsData = [
   {
     id: 2,
     title: "MeetApp",
-    info: "Event Platform with BDD Testing",
+    info: "A serverless event management application with BDD Testing",
     image: meet,
     description: "A serverless event management application showcasing behavior-driven development (BDD) practices using Cucumber and Gherkin. Features comprehensive test coverage including integration tests, end-to-end scenarios, and OAuth authentication validation.",
     githubLink: "https://github.com/torbalansky/meet",
